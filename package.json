@@ -31,5 +31,11 @@
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4",
     "xstate": "^4.20.0"
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "less": "^4.1.1",
+    "less-loader": "^5.0.0",
+    "style-loader": "^2.0.0"
   }
 }

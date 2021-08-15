@@ -1,6 +1,17 @@
 .numbers-sandbox {
-    border: red solid 1px;
     height: 500px;
+    text-align: center;
+    font-family: Arial;
+    .buttons {
+        button {
+            background-color: #fff;
+            border:#000 1px solid;
+            margin: 5px;
+        }
+    }
+    input {
+        width: 600px;
+    }
     .numbers-container {
         height: 100%;
         margin: 0 1em;
@@ -10,19 +21,87 @@
         align-items: center;
         .box {
             &.right {
-                background-color: green;
-                color: white
+                background-color: #90ee90;
+                color: #fff;
             }
             &.left {
-                background-color: blue;
-                color: white
+                background-color: #add8e6;
+                color: #fff;
             }
             font-size: 2em;
             height: 100px;
             width: 200px;
-            border: green solid 1px;
+            border: #000 1px solid;
             text-align: center;
             padding-top: 50px;
+            box-shadow: #000;
         }
     }
 }
+
+.jello-horizontal {
+	-webkit-animation: jello-horizontal 0.5s both;
+	        animation: jello-horizontal 0.5s both;
+}
+
+ @-webkit-keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+  

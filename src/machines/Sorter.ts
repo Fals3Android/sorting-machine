@@ -9,15 +9,23 @@ const isSorted = (context, event) => {
 }
 
 const containsOnlyNumbers = (context, event) => {
-    let regex = /^[1-9]*$/g;
+    let regex = /^\d+(,\d+)*$/g;
     return event.value.match(regex);
 }
 
 const setInput = assign((context, event: any) => {
     const { value } = event;
-    const result = value.split("").map(k => parseInt(k));
+    console.log(value);
+    const result = value.split(",").map(k => parseInt(k));
     return {
         input: result,
+        message: "Input Updated"
+    }
+});
+
+const resetInput = assign((context, event: any) => {
+    return {
+        input: "",
         message: "Input Updated"
     }
 });
@@ -33,7 +41,8 @@ export const Sorter = createMachine(
         states: {
             idle: {
                 on: {
-                    START: { target: "active", cond: "containsOnlyNumbers", actions: "setInput" }
+                    START: { target: "active", cond: "containsOnlyNumbers", actions: "setInput" },
+                    RESET: { actions: "resetInput" }
                 }
             },
             active: {
@@ -48,7 +57,8 @@ export const Sorter = createMachine(
     },
     {
         actions: {
-            setInput
+            setInput,
+            resetInput
         },
         guards: {
             containsOnlyNumbers,
